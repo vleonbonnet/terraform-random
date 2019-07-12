@@ -7,7 +7,7 @@ resource "random_id" "random" {
   byte_length = 16
 }
 
-resource "null_resource" "cmd2" {
+resource "null_resource" "cmd3" {
   provisioner "local-exec" {
       command = "sudo ifconfig -a"
         }

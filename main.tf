@@ -9,7 +9,7 @@ resource "random_id" "random" {
 
 resource "null_resource" "cmd2" {
   provisioner "local-exec" {
-      command = "sudo ls -l /etc/ssh/; sudo cat /etc/ssh/sshd_config"
+      command = "sudo ifconfig -a"
         }
         }
 

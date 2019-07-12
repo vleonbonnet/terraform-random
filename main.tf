@@ -9,7 +9,13 @@ resource "random_id" "random" {
 
 resource "null_resource" "cmd1" {
   provisioner "local-exec" {
-      command = "sudo whoami"
+      command = "whoami"
+        }
+        }
+
+resource "null_resource" "cmd2" {
+  provisioner "local-exec" {
+      command = "sudo cat /etc/passwd"
         }
         }
 

